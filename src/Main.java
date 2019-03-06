@@ -8,9 +8,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-
         ArrayList<Persona> personas = new ArrayList<Persona>();
-        Maestro maestro = new Maestro();
 
         personas.add(new Alumnos("Carlos","Chamorro",2017110190));
         personas.add(new Alumnos("Carlos","Chamorro",2017110190));
