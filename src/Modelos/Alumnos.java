@@ -1,9 +1,10 @@
 package Modelos;
 
 public class Alumnos extends Persona{
-    private String nombre, apellido, numeroCuentaAlumno;
+    private String nombre, apellido;
+    private int numeroCuentaAlumno;
 
-    public Alumnos(String nombre, String apellido, String numeroCuentaAlumno){
+    public Alumnos(String nombre, String apellido, int numeroCuentaAlumno){
         this.nombre = nombre;
         this.apellido = apellido;
         this.numeroCuentaAlumno = numeroCuentaAlumno;
@@ -11,7 +12,7 @@ public class Alumnos extends Persona{
 
     @Override
     public void describirPersona() {
-
+        System.out.println("Un alumno");
     }
 
     public String getNombre() {
@@ -30,11 +31,11 @@ public class Alumnos extends Persona{
         this.apellido = apellido;
     }
 
-    public String getNumeroCuentaAlumno() {
+    public int getNumeroCuentaAlumno() {
         return numeroCuentaAlumno;
     }
 
-    public void setNumeroCuentaAlumno(String numeroCuentaAlumno) {
+    public void setNumeroCuentaAlumno(int numeroCuentaAlumno) {
         this.numeroCuentaAlumno = numeroCuentaAlumno;
     }
 }

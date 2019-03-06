@@ -1,4 +1,8 @@
 package Modelos;
 
-public class Asistentes {
+public class Asistentes extends Persona{
+    @Override
+    public void describirPersona() {
+
+    }
 }
