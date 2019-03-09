@@ -1,13 +1,13 @@
 package Modelos;
 
 public class Clases {
-    private String nombreClase, horario, seccion, carrera, codigoClase;
+    private String nombreClase, horario, seccion, uv, codigoClase;
 
-    public Clases(String nombreClase, String horario,String seccion,String carrera, String codigoClase){
+    public Clases(String nombreClase, String horario,String seccion,String uv, String codigoClase){
         this.nombreClase = nombreClase;
         this.horario = horario;
         this.seccion = seccion;
-        this.carrera = carrera;
+        this.uv = uv;
         this.codigoClase = codigoClase;
     }
 
@@ -35,13 +35,6 @@ public class Clases {
         this.seccion = seccion;
     }
 
-    public String getCarrera() {
-        return carrera;
-    }
-
-    public void setCarrera(String carrera) {
-        this.carrera = carrera;
-    }
 
     public String getCodigoClase() {
         return codigoClase;
@@ -49,5 +42,13 @@ public class Clases {
 
     public void setCodigoClase(String codigoClase) {
         this.codigoClase = codigoClase;
+    }
+
+    public String getUv() {
+        return uv;
+    }
+
+    public void setUv(String uv) {
+        this.uv = uv;
     }
 }

@@ -9,8 +9,8 @@ public class MenuPrincipal {
     public void presentarOpciones() {
         System.out.println("\t \t \t \t Bienvenido (a)");
         System.out.println("\n \t \t Carwash Fuera JOH \n");
-        System.out.println("1.............. Gestionar Clientes");
-        System.out.println("2.............. Servicios");
+        System.out.println("1.............. Agregar");
+        System.out.println("2.............. Imprimir");
         System.out.println("3.............. Salir");
     }
 

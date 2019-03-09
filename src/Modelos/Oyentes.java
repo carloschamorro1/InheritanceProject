@@ -3,7 +3,11 @@ package Modelos;
 public class Oyentes extends Persona{
     private String nombre,apellido, numeroIdentidad;
 
-
+    public Oyentes(String nombre, String apellido, String numeroIdentidad){
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.numeroIdentidad = numeroIdentidad;
+    }
     @Override
     public void describirPersona() {
 
