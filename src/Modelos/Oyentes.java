@@ -10,7 +10,7 @@ public class Oyentes extends Persona{
     }
     @Override
     public void describirPersona() {
-
+        System.out.println("Un oyente");
     }
 
     public String getNombre() {

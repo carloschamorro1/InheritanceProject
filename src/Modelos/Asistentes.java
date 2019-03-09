@@ -14,7 +14,7 @@ public class Asistentes extends Persona{
 
     @Override
     public void describirPersona() {
-
+        System.out.println("Un asistente");
     }
 
     public String getNombre() {

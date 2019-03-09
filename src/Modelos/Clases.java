@@ -54,6 +54,6 @@ public class Clases extends Persona {
 
     @Override
     public void describirPersona() {
-
+        System.out.println(nombreClase);
     }
 }

@@ -27,7 +27,8 @@ public class MenuPrincipal {
                 menuAgregar.procesarOpcion(menuAgregar.leerOpciones());
                 break;
             case 2:
-
+                menuImpresion.presentarOpciones();
+                menuImpresion.procesarOpcion(menuAgregar.leerOpciones());
                 break;
             case 3:
                 System.out.println("Gracias por utilizar el programa");
