@@ -1,3 +1,5 @@
+package Utilidades;
+
 import java.util.Scanner;
 
 public class LectorTeclado {
