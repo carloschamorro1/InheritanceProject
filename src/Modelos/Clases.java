@@ -1,6 +1,6 @@
 package Modelos;
 
-public class Clases {
+public class Clases extends Persona {
     private String nombreClase, horario, seccion, uv, codigoClase;
 
     public Clases(String nombreClase, String horario,String seccion,String uv, String codigoClase){
@@ -50,5 +50,10 @@ public class Clases {
 
     public void setUv(String uv) {
         this.uv = uv;
+    }
+
+    @Override
+    public void describirPersona() {
+
     }
 }

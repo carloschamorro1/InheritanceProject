@@ -11,7 +11,9 @@ public class Maestro extends Persona {
         this.numeroCuentaMaestro = numeroCuentaMaestro;
     }
 
+    public Maestro(){
 
+    }
     @Override
     public void describirPersona() {
         System.out.println("Un maestro");

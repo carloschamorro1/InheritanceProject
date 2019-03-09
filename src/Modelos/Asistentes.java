@@ -1,10 +1,11 @@
 package Modelos;
 
 public class Asistentes extends Persona{
-    private String nombre,apellido,codigoAsistente, numerodeAsistente;
+    private String nombre,apellido,codigoAsistente;
+    private int numerodeAsistente;
 
 
-    public Asistentes(String nombre, String apellido, String codigoAsistente, String numerodeAsistente ){
+    public Asistentes(String nombre, String apellido, String codigoAsistente, int numerodeAsistente ){
         this.nombre = nombre;
         this.apellido = apellido;
         this.codigoAsistente = codigoAsistente;
@@ -40,11 +41,11 @@ public class Asistentes extends Persona{
         this.codigoAsistente = codigoAsistente;
     }
 
-    public String getNumerodeAsistente() {
+    public int getNumerodeAsistente() {
         return numerodeAsistente;
     }
 
-    public void setNumerodeAsistente(String numerodeAsistente) {
+    public void setNumerodeAsistente(int numerodeAsistente) {
         this.numerodeAsistente = numerodeAsistente;
     }
 }

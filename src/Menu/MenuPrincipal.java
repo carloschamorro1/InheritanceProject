@@ -4,8 +4,8 @@ import Utilidades.LectorTeclado;
 
 public class MenuPrincipal {
     public int opcion;
-
     LectorTeclado lt = new LectorTeclado();
+    MenuAgregar menuAgregar = new MenuAgregar();
     public void presentarOpciones() {
         System.out.println("\t \t \t \t Bienvenido (a)");
         System.out.println("\n \t \t Carwash Fuera JOH \n");
@@ -22,6 +22,8 @@ public class MenuPrincipal {
     public void procesarOpcion(int opcion) {
         switch (opcion) {
             case 1:
+                menuAgregar.presentarOpciones();
+                menuAgregar.procesarOpcion(menuAgregar.leerOpciones());
                 break;
             case 2:
                 break;
