@@ -1,9 +1,10 @@
 import Menu.MenuPrincipal;
+import Menu.personManager;
 
 public class Run {
 
-    public void run() {
-        MenuPrincipal menu = new MenuPrincipal();
+    public void run(personManager pm) {
+        MenuPrincipal menu = new MenuPrincipal(pm);
         do {
             menu.presentarOpciones();
             menu.procesarOpcion(menu.leerOpciones());

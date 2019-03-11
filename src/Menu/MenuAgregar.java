@@ -3,14 +3,11 @@ package Menu;
 import Modelos.*;
 import Utilidades.LectorTeclado;
 
-import java.util.ArrayList;
-
 public class MenuAgregar {
     public int opcion;
     LectorTeclado lt = new LectorTeclado();
     public int cm,ca,cc,cas,co;
-    ArrayList<Persona> personas = new ArrayList<Persona>();
-    Maestro maestro = new Maestro();
+    personManager pm;
     public void presentarOpciones() {
         System.out.println("\t \t \t \t Bienvenido (a)");
         System.out.println("1.............. Agregar Maestro");
@@ -30,7 +27,7 @@ public class MenuAgregar {
         switch (opcion) {
             case 1:
                 if(cm == 0){
-                  personas.add(new Maestro(lt.leerString("Por favor ingrese el nombre"),lt.leerString("Por favor ingrese el apellido"),
+                  pm.personas.add(new Maestro(lt.leerString("Por favor ingrese el nombre"),lt.leerString("Por favor ingrese el apellido"),
                           lt.leerString("Por favor ingrese el titulo" ),lt.leerEntero("Por favor ingrese el numero de cuenta","numero no valido")));
                   cm++;
                 }
@@ -38,13 +35,13 @@ public class MenuAgregar {
                     System.out.println("Ya existe un maestro");
                 break;
             case 2:
-                personas.add(new Alumnos(lt.leerString("Por favor ingrese el nombre"),
+                pm.personas.add(new Alumnos(lt.leerString("Por favor ingrese el nombre"),
                         lt.leerString("Por favor ingrese el apellido"),lt.leerEntero("Por favor ingrese el numero de cuenta","Numero no valido")));
                 ca++;
                 break;
             case 3:
                 if(cc == 0){
-                    personas.add(new Clases(lt.leerString("Por favor ingrese el nombre de la clase"), lt.leerString("Por favor ingrese el horario de la clase"),
+                    pm.personas.add(new Clases(lt.leerString("Por favor ingrese el nombre de la clase"), lt.leerString("Por favor ingrese el horario de la clase"),
                             lt.leerString("Por favor ingrese la seccion"),lt.leerString("Por favor ingrese el numero de unidades valorativas"),
                             lt.leerString("Por favor ingrese el codigo de la clase")));
                     cc++;
@@ -54,7 +51,7 @@ public class MenuAgregar {
                 break;
             case 4:
                 if(cas < 2){
-                    personas.add(new Asistentes(lt.leerString("Por favor ingrese el nombre"), lt.leerString("Por favor ingrese el apellido"),
+                    pm.personas.add(new Asistentes(lt.leerString("Por favor ingrese el nombre"), lt.leerString("Por favor ingrese el apellido"),
                             lt.leerString("Por favor ingrese el codigo del asistente"),cc+1));
                     cas++;
                 }
@@ -63,7 +60,7 @@ public class MenuAgregar {
                 break;
             case 5:
                 if(co < 3) {
-                    personas.add(new Oyentes(lt.leerString("Por favor ingrese el nombre"), lt.leerString("Por favor ingrese el apellido"),
+                    pm.personas.add(new Oyentes(lt.leerString("Por favor ingrese el nombre"), lt.leerString("Por favor ingrese el apellido"),
                             lt.leerString("Por favor ingrese el numero de identidad")));
                     co++;
                 }
@@ -74,5 +71,9 @@ public class MenuAgregar {
                 System.out.println("Has regresado al menu principal");
                 break;
         }
+    }
+
+    public MenuAgregar(personManager pm){
+        this.pm = pm;
     }
 }

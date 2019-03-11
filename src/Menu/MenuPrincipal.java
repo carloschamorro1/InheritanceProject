@@ -5,8 +5,9 @@ import Utilidades.LectorTeclado;
 public class MenuPrincipal {
     public int opcion;
     LectorTeclado lt = new LectorTeclado();
-    MenuAgregar menuAgregar = new MenuAgregar();
-    MenuImpresion menuImpresion = new MenuImpresion();
+    personManager pm;
+    MenuAgregar menuAgregar;
+    MenuImpresion menuImpresion;
     public void presentarOpciones() {
         System.out.println("\t \t \t \t Bienvenido (a)");
         System.out.println("\n \t \t Universidad Jose Cecilio del Valle \n");
@@ -34,5 +35,11 @@ public class MenuPrincipal {
                 System.out.println("Gracias por utilizar el programa");
                 break;
         }
+    }
+
+    public MenuPrincipal(personManager pm){
+        this.pm = pm;
+        this.menuAgregar = new MenuAgregar(pm);
+        this.menuImpresion = new MenuImpresion(pm);
     }
 }

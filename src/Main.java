@@ -1,14 +1,11 @@
-import Modelos.Alumnos;
-import Modelos.Maestro;
-import Modelos.Persona;
-
-import java.util.ArrayList;
+import Menu.personManager;
 
 public class Main {
 
     public static void main(String[] args) {
         Run programa = new Run();
-        programa.run();
+        personManager listaprincipal = new personManager();
+        programa.run(listaprincipal);
 //        ArrayList<Persona> personas = new ArrayList<Persona>();
 //        personas.add(new Alumnos("Carlos", "Chamorro", 2017110190));
 //        personas.add(new Alumnos("Carlos", "Chamorro", 2017110190));
