@@ -6,6 +6,6 @@ import java.util.ArrayList;
 
 public class personManager {
 
-    ArrayList<Persona> personas = new ArrayList<Persona>();
+   public ArrayList<Persona> personas = new ArrayList<Persona>();
 
 }

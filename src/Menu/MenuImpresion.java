@@ -1,11 +1,13 @@
 package Menu;
 
+import Modelos.Clases;
 import Utilidades.LectorTeclado;
 
 public class MenuImpresion {
     public int opcion;
     LectorTeclado lt = new LectorTeclado();
     personManager pm;
+    Clases clase = new Clases();
     public void presentarOpciones() {
         System.out.println("\t \t \t \t Bienvenido (a)");
         System.out.println("1.............. Imprimir Resumen");

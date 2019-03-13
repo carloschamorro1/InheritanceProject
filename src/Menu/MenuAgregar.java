@@ -12,10 +12,9 @@ public class MenuAgregar {
         System.out.println("\t \t \t \t Bienvenido (a)");
         System.out.println("1.............. Agregar Maestro");
         System.out.println("2.............. Agregar Alumnos");
-        System.out.println("3.............. Agregar Clase");
-        System.out.println("4.............. Agregar Asistentes");
-        System.out.println("5.............. Agregar Oyentes");
-        System.out.println("6.............. Regresar");
+        System.out.println("3.............. Agregar Asistentes");
+        System.out.println("4.............. Agregar Oyentes");
+        System.out.println("5.............. Regresar");
     }
 
     public int leerOpciones() {
@@ -40,16 +39,6 @@ public class MenuAgregar {
                 ca++;
                 break;
             case 3:
-                if(cc == 0){
-                    pm.personas.add(new Clases(lt.leerString("Por favor ingrese el nombre de la clase"), lt.leerString("Por favor ingrese el horario de la clase"),
-                            lt.leerString("Por favor ingrese la seccion"),lt.leerString("Por favor ingrese el numero de unidades valorativas"),
-                            lt.leerString("Por favor ingrese el codigo de la clase")));
-                    cc++;
-                }
-                else
-                    System.out.println("Ya existe una clase");
-                break;
-            case 4:
                 if(cas < 2){
                     pm.personas.add(new Asistentes(lt.leerString("Por favor ingrese el nombre"), lt.leerString("Por favor ingrese el apellido"),
                             lt.leerString("Por favor ingrese el codigo del asistente"),cc+1));
@@ -58,7 +47,7 @@ public class MenuAgregar {
                 else
                     System.out.println("Ya no se pueden agregar mas asistentes");
                 break;
-            case 5:
+            case 4:
                 if(co < 3) {
                     pm.personas.add(new Oyentes(lt.leerString("Por favor ingrese el nombre"), lt.leerString("Por favor ingrese el apellido"),
                             lt.leerString("Por favor ingrese el numero de identidad")));
