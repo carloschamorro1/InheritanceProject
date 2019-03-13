@@ -27,7 +27,7 @@ public class MenuAgregar {
             case 1:
                 if(cm == 0){
                   pm.personas.add(new Maestro(lt.leerString("Por favor ingrese el nombre"),lt.leerString("Por favor ingrese el apellido"),
-                          lt.leerString("Por favor ingrese el titulo" ),lt.leerEntero("Por favor ingrese el numero de cuenta","numero no valido")));
+                          lt.leerString("Por favor ingrese su identidad"),lt.leerString("Por favor ingrese el titulo" ),lt.leerEntero("Por favor ingrese el numero de cuenta","numero no valido")));
                   cm++;
                 }
                 else
@@ -35,13 +35,13 @@ public class MenuAgregar {
                 break;
             case 2:
                 pm.personas.add(new Alumnos(lt.leerString("Por favor ingrese el nombre"),
-                        lt.leerString("Por favor ingrese el apellido"),lt.leerEntero("Por favor ingrese el numero de cuenta","Numero no valido")));
+                        lt.leerString("Por favor ingrese el apellido"),lt.leerString("Por favor ingrese su identidad"),lt.leerEntero("Por favor ingrese el numero de cuenta","Numero no valido")));
                 ca++;
                 break;
             case 3:
                 if(cas < 2){
                     pm.personas.add(new Asistentes(lt.leerString("Por favor ingrese el nombre"), lt.leerString("Por favor ingrese el apellido"),
-                            lt.leerString("Por favor ingrese el codigo del asistente"),cc+1));
+                            lt.leerString("Por favor ingrese su identidad"),lt.leerString("Por favor ingrese el codigo del asistente"),cc+1));
                     cas++;
                 }
                 else

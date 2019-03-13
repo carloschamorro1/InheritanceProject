@@ -8,4 +8,11 @@ public class Main {
         programa.run(listaprincipal);
     }
 
+    public void leer(){
+        
+    }
+
+    public static int suma(int a, int b){
+        return a + b;
+    }
 }

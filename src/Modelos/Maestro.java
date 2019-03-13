@@ -1,39 +1,25 @@
 package Modelos;
 
 public class Maestro extends Persona {
-    private String nombre,apellido,titulo;
+    private String titulo;
     private int numeroCuentaMaestro;
 
-    public Maestro(String nombre, String apellido, String titulo, int numeroCuentaMaestro){
-        this.nombre = nombre;
-        this.apellido = apellido;
+    public Maestro(String nombre, String apellido, String numeroidentidad, String titulo, int numeroCuentaMaestro){
+        super(nombre,apellido,numeroidentidad);
         this.titulo = titulo;
         this.numeroCuentaMaestro = numeroCuentaMaestro;
     }
 
     public Maestro(){
-
+        super("","","");
     }
+
     @Override
     public void describirPersona() {
         System.out.println("Un maestro");
     }
 
-    public String getNombre() {
-        return nombre;
-    }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public String getApellido() {
-        return apellido;
-    }
-
-    public void setApellido(String apellido) {
-        this.apellido = apellido;
-    }
 
     public String getTitulo() {
         return titulo;

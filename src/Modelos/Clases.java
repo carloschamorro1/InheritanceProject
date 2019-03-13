@@ -1,9 +1,10 @@
 package Modelos;
 
-public class Clases extends Persona {
+public class Clases extends Persona{
     private String nombreClase, horario, seccion, uv, codigoClase;
 
     public Clases(String nombreClase, String horario,String seccion,String uv, String codigoClase){
+        super();
         this.nombreClase = nombreClase;
         this.horario = horario;
         this.seccion = seccion;

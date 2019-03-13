@@ -1,13 +1,12 @@
 package Modelos;
 
 public class Asistentes extends Persona{
-    private String nombre,apellido,codigoAsistente;
+    private String codigoAsistente;
     private int numerodeAsistente;
 
 
-    public Asistentes(String nombre, String apellido, String codigoAsistente, int numerodeAsistente ){
-        this.nombre = nombre;
-        this.apellido = apellido;
+    public Asistentes(String nombre, String apellido, String numeroIdentidad, String codigoAsistente, int numerodeAsistente ){
+        super(nombre,apellido,numeroIdentidad);
         this.codigoAsistente = codigoAsistente;
         this.numerodeAsistente = numerodeAsistente;
     }
@@ -17,21 +16,6 @@ public class Asistentes extends Persona{
         System.out.println("Un asistente");
     }
 
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public String getApellido() {
-        return apellido;
-    }
-
-    public void setApellido(String apellido) {
-        this.apellido = apellido;
-    }
 
     public String getCodigoAsistente() {
         return codigoAsistente;
