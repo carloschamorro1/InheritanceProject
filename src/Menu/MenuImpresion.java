@@ -27,13 +27,11 @@ public class MenuImpresion {
                 }
                 break;
             case 2:
-                for (int i = 0; i < pm.personas.size(); i++) {
-                    if(pm.personas.get(i).getTipoPersona() == "Maestro") {
-                        System.out.println(pm.personas.get(i).getNombre() + pm.personas.get(i).getApellido());
-                    }
-                    else if(pm.personas.get(i).getTipoPersona() == "Alumno"){
-                        System.out.println(pm.personas.get(i).getNombre() + pm.personas.get(i).getApellido());
-                    }
+
+                for (int i = 1; i < pm.personas.size(); i++) {
+                    System.out.print(pm.personas.get(i).getTipoPersona() + pm.personas.get(i).getNombre() +
+                                    pm.personas.get(i).getApellido() + pm.personas.get(i).getIdentidad());
+                    pm.personas.get(i).describirPersona2();
                 }
                 break;
             case 3:
@@ -45,5 +43,5 @@ public class MenuImpresion {
         this.pm = pm;
     }
 
-
+   
 }
