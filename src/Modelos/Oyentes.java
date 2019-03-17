@@ -2,8 +2,11 @@ package Modelos;
 
 public class Oyentes extends Persona{
 
-    public Oyentes(String nombre, String apellido, String numeroIdentidad){
-        super(nombre,apellido,numeroIdentidad);
+    public Oyentes(String tipoPersona,String nombre, String apellido, String numeroIdentidad){
+        super(tipoPersona,nombre,apellido,numeroIdentidad);
+    }
+    public Oyentes(){
+
     }
     @Override
     public void describirPersona() {

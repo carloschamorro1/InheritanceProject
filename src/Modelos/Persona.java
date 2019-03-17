@@ -1,22 +1,31 @@
 package Modelos;
 
 public abstract class Persona {
-    private String nombre,apellido, identidad;
+    private String tipoPersona,nombre,apellido, identidad;
+    Maestro maestro;
+    Asistentes asistentes;
+    Alumnos alumnos;
+    Oyentes oyentes;
 
-    public Persona(String nombre, String apellido, String identidad){
+    public Persona(String tipoPersona, String nombre, String apellido, String identidad){
+        this.tipoPersona = tipoPersona;
         this.nombre = nombre;
         this.apellido = apellido;
         this.identidad = identidad;
     }
     public Persona(){
-        
+
     }
-//    public void verificarMaestro(){
-//        if(this instanceof Maestro){
-//            System.out.println("Ya existe maestro");
-//        }
-//
-//    }
+
+    public void verificar(){
+        if(this instanceof Maestro){
+            System.out.println(maestro.getNombre() + maestro.getApellido());
+        }
+        else if(this instanceof Alumnos){
+            System.out.println(alumnos.getNombre() + alumnos.getApellido());
+        }
+
+    }
     public abstract void describirPersona();
 
 
@@ -42,5 +51,13 @@ public abstract class Persona {
 
     public void setIdentidad(String identidad) {
         this.identidad = identidad;
+    }
+
+    public String getTipoPersona() {
+        return tipoPersona;
+    }
+
+    public void setTipoPersona(String tipoPersona) {
+        this.tipoPersona = tipoPersona;
     }
 }

@@ -5,12 +5,15 @@ public class Asistentes extends Persona{
     private int numerodeAsistente;
 
 
-    public Asistentes(String nombre, String apellido, String numeroIdentidad, String codigoAsistente, int numerodeAsistente ){
-        super(nombre,apellido,numeroIdentidad);
+    public Asistentes(String tipoPersona, String nombre, String apellido, String numeroIdentidad, String codigoAsistente, int numerodeAsistente ){
+        super(tipoPersona,nombre,apellido,numeroIdentidad);
         this.codigoAsistente = codigoAsistente;
         this.numerodeAsistente = numerodeAsistente;
     }
 
+    public Asistentes(){
+
+    }
     @Override
     public void describirPersona() {
         System.out.println("Un asistente");

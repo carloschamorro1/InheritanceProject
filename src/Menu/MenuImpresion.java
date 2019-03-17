@@ -1,13 +1,12 @@
 package Menu;
 
-import Modelos.Clases;
+import Modelos.*;
 import Utilidades.LectorTeclado;
 
 public class MenuImpresion {
     public int opcion;
     LectorTeclado lt = new LectorTeclado();
     personManager pm;
-    Clases clase = new Clases();
     public void presentarOpciones() {
         System.out.println("\t \t \t \t Bienvenido (a)");
         System.out.println("1.............. Imprimir Resumen");
@@ -28,6 +27,14 @@ public class MenuImpresion {
                 }
                 break;
             case 2:
+                for (int i = 0; i < pm.personas.size(); i++) {
+                    if(pm.personas.get(i).getTipoPersona() == "Maestro") {
+                        System.out.println(pm.personas.get(i).getNombre() + pm.personas.get(i).getApellido());
+                    }
+                    else if(pm.personas.get(i).getTipoPersona() == "Alumno"){
+                        System.out.println(pm.personas.get(i).getNombre() + pm.personas.get(i).getApellido());
+                    }
+                }
                 break;
             case 3:
                 System.out.println("Gracias por utilizar el programa");
@@ -37,4 +44,6 @@ public class MenuImpresion {
     public MenuImpresion(personManager pm){
         this.pm = pm;
     }
+
+
 }

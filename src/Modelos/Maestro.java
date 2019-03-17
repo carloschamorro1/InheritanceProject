@@ -1,17 +1,17 @@
 package Modelos;
 
-public class Maestro extends Persona {
+public class Maestro extends Persona{
     private String titulo;
     private int numeroCuentaMaestro;
 
-    public Maestro(String nombre, String apellido, String numeroidentidad, String titulo, int numeroCuentaMaestro){
-        super(nombre,apellido,numeroidentidad);
+    public Maestro(String tipoPersona,String nombre, String apellido, String numeroidentidad, String titulo, int numeroCuentaMaestro){
+        super(tipoPersona,nombre,apellido,numeroidentidad);
         this.titulo = titulo;
         this.numeroCuentaMaestro = numeroCuentaMaestro;
     }
 
     public Maestro(){
-        super("","","");
+
     }
 
     @Override

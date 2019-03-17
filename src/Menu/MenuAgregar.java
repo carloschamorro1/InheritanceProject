@@ -22,11 +22,12 @@ public class MenuAgregar {
         return opcion;
     }
 
+
     public void procesarOpcion(int opcion) {
         switch (opcion) {
             case 1:
                 if(cm == 0){
-                  pm.personas.add(new Maestro(lt.leerString("Por favor ingrese el nombre"),lt.leerString("Por favor ingrese el apellido"),
+                  pm.personas.add(new Maestro("Maestro",lt.leerString("Por favor ingrese el nombre"),lt.leerString("Por favor ingrese el apellido"),
                           lt.leerString("Por favor ingrese su identidad"),lt.leerString("Por favor ingrese el titulo" ),lt.leerEntero("Por favor ingrese el numero de cuenta","numero no valido")));
                   cm++;
                 }
@@ -34,13 +35,13 @@ public class MenuAgregar {
                     System.out.println("Ya existe un maestro");
                 break;
             case 2:
-                pm.personas.add(new Alumnos(lt.leerString("Por favor ingrese el nombre"),
+                pm.personas.add(new Alumnos("Alumno",lt.leerString("Por favor ingrese el nombre"),
                         lt.leerString("Por favor ingrese el apellido"),lt.leerString("Por favor ingrese su identidad"),lt.leerEntero("Por favor ingrese el numero de cuenta","Numero no valido")));
                 ca++;
                 break;
             case 3:
                 if(cas < 2){
-                    pm.personas.add(new Asistentes(lt.leerString("Por favor ingrese el nombre"), lt.leerString("Por favor ingrese el apellido"),
+                    pm.personas.add(new Asistentes("Asistente",lt.leerString("Por favor ingrese el nombre"), lt.leerString("Por favor ingrese el apellido"),
                             lt.leerString("Por favor ingrese su identidad"),lt.leerString("Por favor ingrese el codigo del asistente"),cc+1));
                     cas++;
                 }
@@ -49,7 +50,7 @@ public class MenuAgregar {
                 break;
             case 4:
                 if(co < 3) {
-                    pm.personas.add(new Oyentes(lt.leerString("Por favor ingrese el nombre"), lt.leerString("Por favor ingrese el apellido"),
+                    pm.personas.add(new Oyentes("Oyente",lt.leerString("Por favor ingrese el nombre"), lt.leerString("Por favor ingrese el apellido"),
                             lt.leerString("Por favor ingrese el numero de identidad")));
                     co++;
                 }
