@@ -58,7 +58,14 @@ public class Clases extends Persona{
 
     @Override
     public void describirPersona() {
-        System.out.println(nombreClase);
+        System.out.println("Clase: " + nombreClase + "\t Horario: "+ horario
+                        + "\n Seccion "+ seccion + "\t UV: " + uv
+                        + "\n Codigo de la clase: "+ codigoClase);
+
+    }
+
+    @Override
+    public void describirPersona2() {
 
     }
 

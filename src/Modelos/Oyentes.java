@@ -13,5 +13,10 @@ public class Oyentes extends Persona{
         System.out.println("Un oyente");
     }
 
+    @Override
+    public void describirPersona2() {
+
+    }
+
 
 }

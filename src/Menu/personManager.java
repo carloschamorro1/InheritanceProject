@@ -9,6 +9,6 @@ import java.util.ArrayList;
 public class personManager {
 
    public ArrayList<Persona> personas = new ArrayList<Persona>();
-   public Maestro maestro = new Maestro();
+    public int cm,ca,cc,cas,co;
 
 }

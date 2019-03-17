@@ -19,6 +19,11 @@ public class Asistentes extends Persona{
         System.out.println("Un asistente");
     }
 
+    @Override
+    public void describirPersona2(){
+        System.out.println("Codigo de asistente: "+ codigoAsistente + "\t Numero de asistente " + numerodeAsistente);
+    }
+
 
     public String getCodigoAsistente() {
         return codigoAsistente;

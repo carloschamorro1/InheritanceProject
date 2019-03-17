@@ -16,6 +16,11 @@ public class Alumnos extends Persona{
         System.out.println("Un alumno");
     }
 
+    @Override
+    public void describirPersona2() {
+        System.out.println("Numero de cuenta: "+ getNumeroCuentaAlumno());
+    }
+
 
     public int getNumeroCuentaAlumno() {
         return numeroCuentaAlumno;

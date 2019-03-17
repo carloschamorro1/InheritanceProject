@@ -19,6 +19,10 @@ public class Maestro extends Persona{
         System.out.println("Un maestro");
     }
 
+    @Override
+    public void describirPersona2() {
+        System.out.println("Titulo: "+getTitulo() +"\t" + "Numero de cuenta: "+ getNumeroCuentaMaestro());
+    }
 
 
     public String getTitulo() {

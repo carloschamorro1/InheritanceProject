@@ -2,10 +2,6 @@ package Modelos;
 
 public abstract class Persona {
     private String tipoPersona,nombre,apellido, identidad;
-    Maestro maestro;
-    Asistentes asistentes;
-    Alumnos alumnos;
-    Oyentes oyentes;
 
     public Persona(String tipoPersona, String nombre, String apellido, String identidad){
         this.tipoPersona = tipoPersona;
@@ -17,16 +13,10 @@ public abstract class Persona {
 
     }
 
-    public void verificar(){
-        if(this instanceof Maestro){
-            System.out.println(maestro.getNombre() + maestro.getApellido());
-        }
-        else if(this instanceof Alumnos){
-            System.out.println(alumnos.getNombre() + alumnos.getApellido());
-        }
 
-    }
     public abstract void describirPersona();
+
+    public abstract void describirPersona2();
 
 
     public String getNombre() {
@@ -60,4 +50,5 @@ public abstract class Persona {
     public void setTipoPersona(String tipoPersona) {
         this.tipoPersona = tipoPersona;
     }
+
 }
