@@ -42,4 +42,5 @@ public class MenuPrincipal {
         this.menuAgregar = new MenuAgregar(pm);
         this.menuImpresion = new MenuImpresion(pm);
     }
+
 }
