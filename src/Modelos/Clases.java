@@ -4,7 +4,6 @@ public class Clases extends Persona{
     private String nombreClase, horario, seccion, uv, codigoClase;
 
     public Clases(String nombreClase, String horario,String seccion,String uv, String codigoClase){
-        super();
         this.nombreClase = nombreClase;
         this.horario = horario;
         this.seccion = seccion;
@@ -12,9 +11,6 @@ public class Clases extends Persona{
         this.codigoClase = codigoClase;
     }
 
-    public Clases(){
-
-    }
     public String getNombreClase() {
         return nombreClase;
     }

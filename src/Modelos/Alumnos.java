@@ -8,9 +8,7 @@ public class Alumnos extends Persona{
         this.numeroCuentaAlumno = numeroCuentaAlumno;
     }
 
-    public Alumnos(){
 
-    }
     @Override
     public void describirPersona() {
         System.out.println("Un alumno");

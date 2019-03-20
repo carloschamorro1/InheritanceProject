@@ -11,9 +11,7 @@ public class Asistentes extends Persona{
         this.numerodeAsistente = numerodeAsistente;
     }
 
-    public Asistentes(){
 
-    }
     @Override
     public void describirPersona() {
         System.out.println("Un asistente");
