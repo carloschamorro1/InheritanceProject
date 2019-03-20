@@ -38,8 +38,20 @@ public class MenuImpresion {
     }
 
     public void imprimirResumen(){
-        for (int i = 0; i < pm.personas.size(); i++) {
-            pm.personas.get(i).describirPersona();
+        if(pm.ca>= 6 && pm.cm ==1) {
+            for (int i = 0; i < pm.personas.size(); i++) {
+                pm.personas.get(i).describirPersona();
+            }
+        }
+        else if(pm.ca <6 || pm.cm != 1) {
+            System.out.println("\t \t ********ATENCION********");
+            System.out.println("No hay suficientes alumnos o no se ha ingresado maestro");
+            System.out.println("Informacion ingresada \n");
+            System.out.println("Se necesitan 6 alumnos minimo y actualmente se han ingresado: " + pm.ca);
+            if (pm.cm == 1)
+                System.out.println("Ya se ha ingresado el maestro");
+            else
+                System.out.println("No se ha ingresado el maestro");
         }
     }
 
@@ -52,7 +64,7 @@ public class MenuImpresion {
                         pm.personas.get(i).getApellido() + "\t" + pm.personas.get(i).getIdentidad() + "\t");
                 pm.personas.get(i).describirPersona2();
             }
-        } else if (pm.ca < 6 && pm.cm != 1) {
+        } else if (pm.ca < 6 || pm.cm != 1) {
             System.out.println("\t \t ********ATENCION********");
             System.out.println("No hay suficientes alumnos o no se ha ingresado maestro");
             System.out.println("Informacion ingresada \n");
